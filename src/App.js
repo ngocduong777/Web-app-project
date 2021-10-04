@@ -1,23 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     {/* trong file components, moi nguoi tu tao cho minh 1 file jsx de lam nha */}
+     {/* copy tu code cu qua thoi, voi nhung ai ma luc truoc code ngay trong file App.js */}
+     {/* thi can truyen props luc dung component */}
+     {/* vi du dung component: <Login <prop name(neu co)> = { value }/> */}
     </div>
   );
 }
