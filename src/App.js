@@ -1,13 +1,21 @@
 import './App.css';
-
+import Navbar from './components/Toppage';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import AboutUs from './components/AboutUs';
 function App() {
   return (
-    <div className="App">
-     {/* trong file components, moi nguoi tu tao cho minh 1 file jsx de lam */}
-     {/* copy tu code cu qua thoi, voi nhung ai ma luc truoc code ngay trong file App.js */}
-     {/* thi can truyen props luc dung components */}
-     {/* vi du dung component: <Login <prop name(neu co)> = { value }/> */}
-    </div>
+    <>
+
+    <Router>
+    
+      <Switch>
+        <Route path='/AboutUs' component={AboutUs} />
+        <Route path='/Home' component={Navbar} />
+      </Switch>
+    </Router>
+  </>
+
   );
 }
 
