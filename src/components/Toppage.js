@@ -33,8 +33,8 @@ function Navbar() {
      {/*Phan navigation bar cua toppage*/}
       <nav className='navbar'>
         <div className='navbar-container'>
+        <p className="game-title-toppage">Obstacles Crossed</p> 
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            Obstacles Crossed
             <i class='fas fa-gamepad' />
           </Link>
           <div className='menu-icon' onClick={handleClick}>
@@ -50,7 +50,7 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-                to='/Login'
+                to='./SignIn'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
@@ -58,7 +58,7 @@ function Navbar() {
               </Link>
             </li>
 
-            <li>
+            {/* <li>
               <Link
                 to='/sign-up'
                 className='nav-links-mobile'
@@ -66,22 +66,22 @@ function Navbar() {
               >
                 Sign Up
               </Link>
-            </li>
+            </li> */}
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          {button && <Button type="button" buttonStyle='btn--outline'>SIGN UP</Button>}
         </div>
       </nav>
 
  {/*Phan hinh anh game cua toppage*/}
       <div className='hero-container'>
-        <h1>BEST TEAM NAME</h1>
+        <h1 className="slogan">BEST TEAM NAME</h1>
       </div>
 
  
  {/*Phan How to play cua toppage*/}
       <div className="How-to-play">
         <h2>how to play</h2>
-        <p>プレイヤーは、障害を乗り越えるための武器や能力を手に入れることができます。
+        <p className="howtoplay-para">プレイヤーは、障害を乗り越えるための武器や能力を手に入れることができます。
           ただし、1回しか使用できません。武器は出現回数は無制限です。
           走っている間、武器はランダムに出現します。
         </p>
@@ -90,12 +90,12 @@ function Navbar() {
 
     {/*Phan contact us cua toppage*/}
       <div className='footer'>
-        <p>contact us</p>
-        <img src={instalogo} width="65"
-          height="60" />
-        <img src={fblogo} width="130"
-          height="60" />
-        <a href="mailto: abc@example.com">bestteamname@gmail.com</a>
+        <p className="contact-us">contact us</p>
+        <img  className="toppage-imgs" src={instalogo} width="65"
+          height="60" alt="ins-logo"/>
+        <img className="toppage-imgs" src={fblogo} width="130"
+          height="60" alt="fb-logo" />
+        <a className="mail" href="mailto: abc@example.com">bestteamname@gmail.com</a>
       </div>
     </>
   );

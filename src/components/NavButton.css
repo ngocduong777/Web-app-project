@@ -2,7 +2,8 @@
     --primary:#ffffff;
 }
 .btn{
-    padding: 8px 20px;
+    margin-top: 55px;
+    padding: 8px 10px;
     border-radius: 2px;
     outline: none;
     cursor: pointer;

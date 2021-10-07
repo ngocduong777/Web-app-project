@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Profile_manager.css";
+// import "./Profile_manager.css";
 
 const Appi = () => {
     const [imgPreview, setImgPreview] = useState(null);
@@ -24,7 +24,7 @@ const Appi = () => {
         <>
             <div className="container-nav">
                 <div id="branding">
-                    <h1><span>Obstacles Crossed</span></h1>
+                    <h1>Obstacles Crossed</h1>
                 </div>
 
             </div>

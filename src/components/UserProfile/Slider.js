@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import React, { useState } from 'react'
 import './Slider.css'
 import BtnSlider from './BtnSlider'
@@ -49,6 +50,7 @@ export default function Slider() {
                             >
                                 <img
                                     src={process.env.PUBLIC_URL + `/Imgs/img${index + 1}.jpg`}
+                                    alt="some-inage"
                                 />
                             </div>
                         )
