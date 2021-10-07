@@ -44,15 +44,15 @@ function App() {
 
   return (
     <div className="App">
-      {/* {(user.username !== "") ? (
+      {(user.username !== "") ? (
         <div>
           welcome {adminUser.username}
           <button onClick={Logout}>Log out</button>
         </div>
       ) : (
         <SignIn Option={Option} Login={Login} error={error}/>
-      )} */}
-      <SignUp />
+      )}
+      {/* <SignUp /> */}
     </div>
   );
   
