@@ -3,7 +3,7 @@ import { Select } from 'antd';
 import 'antd/dist/antd.css';
 import SignIn from './components/SignIn';
 import './App.css'
-import SignUp from './components/SignUp';
+// import SignUp from './components/SignUp';
 
 function App() {
   const adminUser = {
