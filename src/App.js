@@ -4,6 +4,10 @@ import 'antd/dist/antd.css';
 import SignIn from './components/SignIn';
 import './App.css'
 // import SignUp from './components/SignUp';
+import Navbar from './components/Toppage';
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Appi from './components/Profile_manager';
+import Slider from './components/UserProfile/Slider';
 
 function App() {
   const adminUser = {
@@ -43,6 +47,7 @@ function App() {
   }
 
   return (
+    <>
     <div className="App">
       {(user.username !== "") ? (
         <div>
@@ -54,9 +59,11 @@ function App() {
       )}
       {/* <SignUp /> */}
     </div>
+    </>
+  
+
   );
   
   
 }
-
 export default App;
