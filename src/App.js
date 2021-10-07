@@ -5,7 +5,7 @@ import SignIn from './components/SignIn';
 import './App.css'
 // import SignUp from './components/SignUp';
 import Navbar from './components/Toppage';
-// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Appi from './components/Profile_manager';
 import Slider from './components/UserProfile/Slider';
 
@@ -49,15 +49,16 @@ function App() {
   return (
     <>
     <div className="App">
-      {(user.username !== "") ? (
+      {/* {(user.username !== "") ? (
         <div>
           welcome {adminUser.username}
           <button onClick={Logout}>Log out</button>
         </div>
       ) : (
         <SignIn Option={Option} Login={Login} error={error}/>
-      )}
+      )} */}
       {/* <SignUp /> */}
+      <Appi />
     </div>
     </>
   
