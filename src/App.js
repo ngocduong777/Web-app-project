@@ -1,14 +1,62 @@
-import './App.css';
+import React, {useState} from 'react'
+import { Select } from 'antd';
+import 'antd/dist/antd.css';
+import SignIn from './components/SignIn';
+import './App.css'
+import SignUp from './components/SignUp';
 
 function App() {
+  const adminUser = {
+    username: "admin",
+    password: "admin123",
+  }
+  
+    const { Option } = Select;
+
+  
+  const [user, setUser] = useState({username: "", password: ""});
+  const [error, setError] = useState("")
+
+  const Login = details => {
+    console.log(details);
+    if(details.username === adminUser.username && details.password === adminUser.password){
+      console.log("Logged in successfully!");
+      setUser({
+        username: details.username,
+        password: details.password,
+      });
+    }
+      
+    else 
+      console.log("Details do not match!");
+      setError("Details do not match!")
+  }
+
+
+  const Logout = () => {
+    setUser({
+      username: "",
+      password: "",
+      // role: "",
+    });
+    setError("");
+  }
+
   return (
     <div className="App">
-     {/* trong file components, moi nguoi tu tao cho minh 1 file jsx de lam */}
-     {/* copy tu code cu qua thoi, voi nhung ai ma luc truoc code ngay trong file App.js */}
-     {/* thi can truyen props luc dung components */}
-     {/* vi du dung component: <Login <prop name(neu co)> = { value }/> */}
+      {/* {(user.username !== "") ? (
+        <div>
+          welcome {adminUser.username}
+          <button onClick={Logout}>Log out</button>
+        </div>
+      ) : (
+        <SignIn Option={Option} Login={Login} error={error}/>
+      )} */}
+      <SignUp />
     </div>
   );
+  
+  
 }
 
 export default App;
