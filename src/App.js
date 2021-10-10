@@ -61,10 +61,10 @@ function App() {
       )} */}
       {/* <SignUp /> */}
       {/* <App_user /> */}
-      {/* <Router>
+      <Router>
       <Navbar />
-      </Router> */}
-      <HomePage />
+      </Router>
+      {/* <HomePage /> */}
     </div>
     </>
   
