@@ -269,7 +269,7 @@ class AboutUs extends React.Component {
             )}
           </Typography>
           <Typography my variant="h6">
-            {"Ageplay: "}
+            {"Rating: "}
             {this.state.edit ? (
               <TextField
                 style={{ width: 35 }}
