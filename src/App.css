@@ -189,6 +189,55 @@ body {
 
 /* ------------- HOME PAGE --------------- */
 
-.bg-myRed{
-    background-color: red;
+.bg-myBg{
+    background-color: #2C394B;
 }
+
+.variant-myCl {
+    color: white;
+}
+
+.home-picture-container {
+    margin: 3%;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    
+}
+
+.pic {
+    border-radius: 2rem;
+    width: 70px;
+    height: 70px;
+    background-color: #A2DBFA;
+}
+.username-tag {
+    text-decoration: none;
+    color: #082032;
+    font-size: 1rem;
+    margin: 7%;
+}
+
+.play-background {
+    background-image: url("./assets/images/gameimage.png");
+    margin: 0% auto;
+    width: 70%;
+    height: 500px;
+    border-radius: 2rem;
+}
+
+.button-container {
+    margin: 35%;
+    margin-top: 40%;
+    width: 30%;
+    height: 50px;
+    background-color: #A2DBFA;
+    border-radius: 1rem;
+}
+
+.play-text {
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+

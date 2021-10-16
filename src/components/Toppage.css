@@ -172,7 +172,7 @@
     left: 0;
     top: -90px;
     z-index: -1;
-    background-image: url(../assets/images/game\ image.png);
+    background-image: url("./assets/images/gameimage.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
