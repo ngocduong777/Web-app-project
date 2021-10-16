@@ -43,7 +43,6 @@ function App() {
       setError("Details do not match!")
   }
 
-
   const Logout = () => {
     setUser({
       username: "",
