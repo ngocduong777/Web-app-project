@@ -3,17 +3,18 @@
 import React, {useState} from 'react'
 import { Select } from 'antd';
 import 'antd/dist/antd.css';
-import SignIn from './components/SignIn';
+// import SignIn from './components/SignIn';
 import './App.css'
-import SignUp from './components/SignUp';
-import Navbar from './components/Toppage';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Appi from './components/Profile_manager';
-import Slider from './components/UserProfile/Slider';
-import App_user from './components/UserProfile/Profile_user';
+// import SignUp from './components/SignUp';
+// import Navbar from './components/Toppage';
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// import Appi from './components/Profile_manager';
+// import Slider from './components/UserProfile/Slider';
+// import App_user from './components/UserProfile/Profile_user';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './components/HomePage';
-import Checkin from'./components/Checkin';
-import AboutUs from "./components/pages/AboutUs";
+// import Checkin from'./components/Checkin';
+// import AboutUs from "./components/pages/AboutUs";
 
 function App() {
   const adminUser = {
@@ -68,8 +69,8 @@ function App() {
       {/* <Router>
       <Navbar />
       </Router> */}
-      {/* <HomePage /> */}
-      <Checkin />
+      <HomePage />
+      {/* <AboutUs /> */}
     </div>
     </>
   

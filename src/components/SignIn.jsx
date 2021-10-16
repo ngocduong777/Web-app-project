@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import React, { useState} from 'react';
 import { Select } from 'antd';
 import 'antd/dist/antd.css';
