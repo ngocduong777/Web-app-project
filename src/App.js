@@ -12,7 +12,8 @@ import Appi from './components/Profile_manager';
 import Slider from './components/UserProfile/Slider';
 import App_user from './components/UserProfile/Profile_user';
 import HomePage from './components/HomePage';
-import Checkin from'./components/Checkin.js';
+import Checkin from'./components/Checkin';
+import AboutUs from "./components/pages/AboutUs";
 
 function App() {
   const adminUser = {
