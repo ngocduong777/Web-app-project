@@ -1,16 +1,19 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-pascal-case */
 import React, {useState} from 'react'
-// import { Select } from 'antd';
-// import 'antd/dist/antd.css';
-// import SignIn from './components/SignIn';
-// import './App.css'
-// import SignUp from './components/SignUp';
+import { Select } from 'antd';
+import 'antd/dist/antd.css';
+import SignIn from './components/SignIn';
+import './App.css'
+import SignUp from './components/SignUp';
 import Navbar from './components/Toppage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import Appi from './components/Profile_manager';
-// import Slider from './components/UserProfile/Slider';
-// import App_user from './components/UserProfile/Profile_user';
+import Appi from './components/Profile_manager';
+import Slider from './components/UserProfile/Slider';
+import App_user from './components/UserProfile/Profile_user';
 import HomePage from './components/HomePage';
+import Checkin from'./components/Checkin.js';
+
 function App() {
   const adminUser = {
     username: "admin",
@@ -61,10 +64,11 @@ function App() {
       )} */}
       {/* <SignUp /> */}
       {/* <App_user /> */}
-      <Router>
+      {/* <Router>
       <Navbar />
-      </Router>
+      </Router> */}
       {/* <HomePage /> */}
+      <Checkin />
     </div>
     </>
   
