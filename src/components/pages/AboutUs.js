@@ -20,7 +20,7 @@ import {
   Typography,
   Switch
 } from "@mui/material";
-import { AccountCircle, Settings, Logout } from "@mui/icons-material/";
+import { AccountCircle, Settings, Logout } from "@mui/icons-material";
 
 class AboutUs extends React.Component {
   constructor(props) {
