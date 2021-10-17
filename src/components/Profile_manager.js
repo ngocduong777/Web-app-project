@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import "./Profile_manager.css";
+import "./Profile_manager.css";
 
 const Appi = () => {
     const [imgPreview, setImgPreview] = useState(null);
@@ -22,22 +22,22 @@ const Appi = () => {
 
     return (
         <>
-            <div className="container-nav">
+            <div className="container-nav-pm">
                 <div id="branding">
                     <h1>Obstacles Crossed</h1>
                 </div>
 
             </div>
 
-            <div className="userprofile">
+            <div className="userprofile-pm">
                 <h1>user profile</h1>
             </div>
 
-            <div className="App">
-                <div className="container-image">
-                    {error && <p className="errorMsg">File not supported</p>}
+            <div className="App-pm">
+                <div className="container-image-pm">
+                    {error && <p className="errorMsg-pm">File not supported</p>}
                     <div
-                        className="imgPreview"
+                        className="imgPreview-pm"
                         style={{
                             background: imgPreview
                                 ? `url("${imgPreview}") no-repeat center/cover`
@@ -55,7 +55,7 @@ const Appi = () => {
                             </>
                         )}
 
-                        <div className="remove">
+                        <div className="remove-pm">
                             {imgPreview && (
                                 <button onClick={() => setImgPreview(null)}>Remove image</button>
                             )}
@@ -63,7 +63,7 @@ const Appi = () => {
                     </div>
 
                 </div>
-                <div className="box">
+                <div className="box-pm">
 
                     <label for="nickname">nickname :</label>
                     <input id="nickname" type="text" name="" value="btn2021" /><br /><br />
@@ -97,7 +97,7 @@ const Appi = () => {
                     </select><br /><br />
 
                 </div>
-                <div className="save_cancel">
+                <div className="save_cancel-pm">
                     <button id="cancel" name="cancel">cancel</button>
 
                     <button id="done" name="done">save</button>
