@@ -1,12 +1,12 @@
 /* eslint-disable react/jsx-pascal-case */
 import React, { useState } from 'react'
-import './Slider.css'
+import './Profile_user_final.css';
 import BtnSlider from './BtnSlider'
 import dataSlider from './dataSlider'
 import App_user from './Profile_user'
 
 
-export default function Slider() {
+export default function Profile_user_final() {
 
     const [slideIndex, setSlideIndex] = useState(1)
 
@@ -39,14 +39,14 @@ export default function Slider() {
         <>
 
 
-            <div className="AppUser">
+            <div className="AppUser-sd">
                 <App_user />
                 <div className="container-slider">
                     {dataSlider.map((obj, index) => {
                         return (
                             <div
                                 key={obj.id}
-                                className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
+                                className={slideIndex === index + 1 ? "slide active-anim" : "slide-pu"}
                             >
                                 <img
                                     src={process.env.PUBLIC_URL + `/Imgs/img${index + 1}.jpg`}
