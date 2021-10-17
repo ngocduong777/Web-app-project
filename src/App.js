@@ -9,8 +9,8 @@ import './App.css'
 // import Navbar from './components/Toppage';
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import Appi from './components/Profile_manager';
-// import Slider from './components/UserProfile/Slider';
-// import App_user from './components/UserProfile/Profile_user';
+// import Profile_user_final from './components/UserProfile/Profile_user_final';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './components/HomePage';
 // import Checkin from'./components/Checkin';
