@@ -22,7 +22,7 @@ const App_user = () => {
 
     return (
         <>
-            <div className="container-nav">
+            <div className="container-nav-pu">
                 <div id="branding">
                     <h1><span>Obstacles Crossed</span></h1>
                 </div>
@@ -33,8 +33,8 @@ const App_user = () => {
                 <h1>user profile</h1>
             </div>
 
-            <div className="App">
-                <div className="container-image">
+            <div className="App-pu">
+                <div className="container-image-pu">
                     {error && <p className="errorMsg">File not supported</p>}
                     <div
                         className="imgPreview"
@@ -55,7 +55,7 @@ const App_user = () => {
                             </>
                         )}
 
-                        <div className="remove">
+                        <div className="remove-pu">
                             {imgPreview && (
                                 <button onClick={() => setImgPreview(null)}>Remove image</button>
                             )}
@@ -63,7 +63,7 @@ const App_user = () => {
                     </div>
 
                 </div>
-                <div className="box">
+                <div className="box-pu">
 
                     <label for="nickname">nickname :</label>
                     <input id="nickname" type="text" name="" value="btn2021" /><br /><br />
@@ -97,7 +97,7 @@ const App_user = () => {
                     </select><br /><br />
 
                 </div>
-                <div className="save_cancel">
+                <div className="save_cancel-pu">
                     <button id="cancel" name="cancel">cancel</button>
 
                     <button id="done" name="done">save</button>
