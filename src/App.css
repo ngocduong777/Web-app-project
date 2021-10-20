@@ -170,7 +170,6 @@ body {
 }
 .sign-up-button-container {
     margin-left: 100px;
-    /* margin-bottom: 100px; */
 }
 
 .sign-up-buttons {
@@ -229,6 +228,9 @@ body {
     height: 500px;
     border-radius: 2rem;
     background-size: cover;
+}
+.sample {
+    padding-bottom: 200px;
 }
 
 .button-container {
