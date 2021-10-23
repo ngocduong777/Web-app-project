@@ -15,16 +15,16 @@ import {
   TableHead,
   TablePagination,
   TableRow,
+  TextField,
   Toolbar,
   Typography
 } from "@mui/material";
 import { AccountCircle, Settings, Logout } from "@mui/icons-material";
-import SearchBar from "material-ui-search-bar";
 
 const columns = [
   { id: "no", label: "Rank No.", minWidth: 70, align: "center" },
-  { id: "name", label: "ユーザー名", minWidth: 170, align: "center" },
-  { id: "score", label: "スコア", minWidth: 100, align: "center" }
+  { id: "name", label: "Name", minWidth: 170, align: "center" },
+  { id: "score", label: "Score", minWidth: 100, align: "center" }
 ];
 
 const DefaultRows = [
@@ -53,25 +53,18 @@ const DefaultRows = [
 export default function Ranking() {
   const [rows, setRows] = React.useState(DefaultRows);
   const [searched, setSearched] = React.useState("");
+  const [page, setPage] = React.useState(0);
+  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const requestSearch = (event) => {
+  const onSearch = (event) => {
+    let str = event === undefined ? "" : event.target.value;
+    setSearched(str);
     const filteredRows = DefaultRows.filter((row) => {
-      return row.name
-        .toLowerCase()
-        .includes(event === undefined ? "" : event.toLowerCase());
+      return row.name.toLowerCase().includes(str.toLowerCase());
     });
     setRows(filteredRows);
   };
-
-  const cancelSearch = () => {
-    setSearched("");
-    requestSearch(searched);
-  };
-
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
-
-  const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -152,15 +145,10 @@ export default function Ranking() {
         color="inherit"
         style={{ textAlign: "center" }}
       >
-        {" "}
-        リーダーボード{" "}
+        LEADERBOARD
       </Typography>
       <Toolbar>
-        <SearchBar
-          value={searched}
-          onChange={(searchVal) => requestSearch(searchVal)}
-          onCancelSearch={() => cancelSearch()}
-        />
+        <TextField onChange={onSearch} value={searched} />
       </Toolbar>
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
