@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './NavButton';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './Toppage.css';
 
 import fblogo from '../assets/images/Facebook Icon .png';
 import instalogo from '../assets/images/instagram-logo.png';
+import AboutUs from './pages/AboutUs';
+import SignIn from './SignIn';
+import { OmitProps } from 'antd/lib/transfer/ListBody';
 
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  // const [bgState, setBgState] = useState(false);
 
+  let history = useHistory();
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);//tat di (nhan dau x)
 
@@ -34,7 +39,10 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
         <p className="game-title-toppage">Obstacles Crossed</p> 
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+          <Link to='/' className='navbar-logo' onClick={() => {
+            closeMobileMenu();
+            // setBgState(false);
+          }}>
             <i class='fas fa-gamepad' />
           </Link>
           <div className='menu-icon' onClick={handleClick}>
@@ -44,15 +52,20 @@ function Navbar() {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='/AboutUs' target="_self" className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/aboutus' className='nav-links' onClick={() => {
+                closeMobileMenu();
+                history.push("/aboutus");
+                }}  >
                 About Us
               </Link>
             </li>
             <li className='nav-item'>
               <Link
-                to='./SignIn'
+                to='./signin'
                 className='nav-links'
                 onClick={closeMobileMenu}
+                
+                // component={SignIn}
               >
                 Login
               </Link>
@@ -73,7 +86,7 @@ function Navbar() {
       </nav>
 
  {/*Phan hinh anh game cua toppage*/}
-      <div className='hero-container'>
+      <div className= "hero-container"  >
         <h1 className="slogan">BEST TEAM NAME</h1>
       </div>
 

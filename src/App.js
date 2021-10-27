@@ -1,81 +1,89 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-pascal-case */
-import React, {useState} from 'react'
+import React, { useContext, createContext, useState, useMemo } from 'react'
 import { Select } from 'antd';
 import 'antd/dist/antd.css';
-// import SignIn from './components/SignIn';
+import SignIn from './components/SignIn';
 import './App.css'
-// import SignUp from './components/SignUp';
-// import Navbar from './components/Toppage';
-// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import Appi from './components/Profile_manager';
-// import Profile_user_final from './components/UserProfile/Profile_user_final';
-
+import SignUp from './components/SignUp';
+import Navbar from './components/Toppage';
+import { BrowserRouter as Router, Switch, Route, Link, Redirect, useHistory, useLocation } from 'react-router-dom';
+import Appi from './components/Profile_manager';
+import Profile_user_final from './components/UserProfile/Profile_user_final';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './components/HomePage';
-// import Checkin from'./components/Checkin';
-// import AboutUs from "./components/pages/AboutUs";
+import Checkin from'./components/Checkin';
+import AboutUs from "./components/pages/AboutUs";
+import { ProvideAuth, UserContext, useAuth }  from './components/Authentication/UserContext';
+import { Nav } from 'react-bootstrap';
+// import Ranking from './components/pages/Rank';
+
 
 function App() {
-  const adminUser = {
-    username: "admin",
-    password: "admin123",
+
+  const auth = useAuth();
+  const fictionUser = {
+    username: "user01",
+    password: "user123",
   }
-
-  // const { Option } = Select;
-
   
-  const [user, setUser] = useState({username: "", password: ""});
-  const [error, setError] = useState("")
 
+  // const [ user, setUser ] = useState({
+  //   username: "",
+  //   password: ""
+  // })
+  const [ username, setUsername ] = useState("usern")
+  const [ password, setPassword ] = useState("pwd")
+  
+  const value = useMemo(() => ({ username, setUsername, password, setPassword }), [ username, setUsername, password, setPassword ]);
+
+  const [error, setError] = useState("")
   const Login = details => {
     console.log(details);
-    if(details.username === adminUser.username && details.password === adminUser.password){
+    if(details.username === fictionUser.username && details.password === fictionUser.password){
       console.log("Logged in successfully!");
-      setUser({
-        username: details.username,
-        password: details.password,
-      });
+      setUsername(details.username)
+      setPassword(details.password)
+      setError("");
+      return true;
     }
       
-    else 
+    else {
       console.log("Details do not match!");
       setError("Details do not match!")
+      return false;
   }
-
-  const Logout = () => {
-    setUser({
-      username: "",
-      password: "",
-      // role: "",
-    });
-    setError("");
-  }
-
-  return (
-    <>
-    <div className="App">
-      {/* {(user.username !== "") ? (
-        <div>
-          welcome {adminUser.username}
-          <button onClick={Logout}>Log out</button>
-        </div>
-      ) : (
-        <SignIn Option={Option} Login={Login} error={error}/>
-      )} */}
-      {/* <SignUp /> */}
-      {/* <App_user /> */}
-      {/* <Router>
-      <Navbar />
-      </Router> */}
-      <HomePage />
-      {/* <AboutUs /> */}
-    </div>
-    </>
-  
-
-  );
-  
-  
 }
+  return (
+    <ProvideAuth>
+      <Router>
+        {/* <div className="App">
+          <Navbar />
+        </div> */}
+          <Switch>
+            <Route exact path="/" component={Navbar}/>
+            <Route
+              exact 
+              path="/signin"
+              render={ props => (
+               <SignIn {...props} defaultAccount={fictionUser} error={error} Login={Login} />
+             )} 
+            />
+            <Route exact path="/aboutus" component={AboutUs} />
+            <Route exact path="/signup" component={SignUp} />
+            <UserContext.Provider value={{ username, password }}>
+              <Route exact path="/homepage"  component={HomePage} />
+              <Route exact path="/managerprofile" component={Appi} />
+              <Route exact path="/userprofile" component={Profile_user_final} />
+              {/* <Route exact path="/shop" component={Shop} /> */}
+              {/* <Route exact path="/rank" component={Ranking} /> */}
+            </UserContext.Provider>
+          </Switch>
+      </Router>
+    </ProvideAuth>
+  );
+}
+
+
+
 export default App;

@@ -21,7 +21,6 @@ import {
   Switch
 } from "@mui/material";
 import { AccountCircle, Settings, Logout } from "@mui/icons-material";
-
 class AboutUs extends React.Component {
   constructor(props) {
     super(props);
@@ -96,12 +95,17 @@ class AboutUs extends React.Component {
     }.bind(this);
   };
 
+  
   render() {
     return (
       <Paper sx={{ width: "100%", overflow: "hidden" }}>
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static" style={{ background: "#2E3B55" }}>
             <Toolbar>
+            <a onClick={() => {
+                        window.open("/", "_self");
+                        window.close();
+                    }}><i class="fas fa-arrow-circle-left"></i></a>
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 Obstacle Crossed
               </Typography>

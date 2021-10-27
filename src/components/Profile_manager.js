@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./Profile_manager.css";
 
 const Appi = () => {
+    let history = useHistory();
     const [imgPreview, setImgPreview] = useState(null);
     const [error, setError] = useState(false);
 
@@ -98,7 +100,7 @@ const Appi = () => {
 
                 </div>
                 <div className="save_cancel-pm">
-                    <button id="cancel" name="cancel">cancel</button>
+                    <button id="cancel" onClick={() => history.push("/homepage")} name="cancel">cancel</button>
 
                     <button id="done" name="done">save</button>
                 </div>

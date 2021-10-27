@@ -6,22 +6,33 @@ body {
     color: #FFFFFF;
 }
 /* ------- SIGN IN ------- */
-
 .sign-in-container {
     width: 280px;
     height: 500px;
     margin: auto;
     margin-top: 5%;
     background-color:#2C394B;
+
 }
 
-.sign-in-title {
+
+.sign-in-title-bar {
     background-color: #082032;
     padding-bottom: 4%;
     color:#A2DBFA;
     font-size: 20px;
+    padding: 3%  15%;
+    display: flex;
+    
+}
+
+.sign-in-title {
     text-align: center;
-    padding: 3% 0%;
+}
+.sign-in-close-button {
+    margin-left: 6%;
+    text-decoration: none;
+    color: #A2DBFA;
 }
 
 .cheering {
@@ -43,10 +54,6 @@ body {
     margin: 0% 45%;
 }
 
-.sign-in-input-container {
-    margin-top: 5%;
-}
-
 .sign-in-labels {
     font-family: 'Cinzel', serif;
     color: #FEF1E6;
@@ -62,6 +69,7 @@ body {
     border-style: none;
     padding-left: 3%;
     font-weight: bold;
+    color: #FFFFFF;
 }
 
 .sign-in-inputs:focus {

@@ -35,7 +35,10 @@ function SignUp() {
             </div>
             <div className="sign-up-button-container">
                 <input className="sign-up-buttons" type="submit" value="Sign Up" />
-                <button className="sign-up-buttons">Cancel</button>
+                <button className="sign-up-buttons" onClick={() => {
+                        window.open("/", "_self");
+                        window.close();
+                    }}>Cancel</button>
             </div>
         </div>
     )

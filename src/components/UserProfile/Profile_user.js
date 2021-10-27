@@ -23,8 +23,12 @@ const App_user = () => {
     return (
         <>
             <div className="container-nav-pu">
-                <div id="branding">
-                    <h1><span>Obstacles Crossed</span></h1>
+                <div className="branding">
+                <a onClick={() => {
+                        window.open("/homepage", "_self");
+                        window.close();
+                }}><i class="fas fa-arrow-circle-left"></i></a>
+                <p className="profile-user-title">Obstacles Crossed</p>
                 </div>
 
             </div>

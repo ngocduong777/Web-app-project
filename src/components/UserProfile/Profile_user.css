@@ -39,6 +39,10 @@ margin-left: 70px;
 
   display: flex;
 }
+.profile-user-title {
+  font-size: 2rem;
+  color: white;
+}
 
 .container-image-pu {
     margin-top: 100px;
@@ -169,4 +173,8 @@ margin-bottom: 100px;
 }
 button:hover{
 background-color: #DFFFFD;
+}
+
+.branding {
+  display: flex;
 }
