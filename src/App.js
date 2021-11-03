@@ -17,7 +17,7 @@ import AboutUs from "./components/pages/AboutUs";
 import { ProvideAuth, UserContext, useAuth }  from './components/Authentication/UserContext';
 import { Nav } from 'react-bootstrap';
 // import Ranking from './components/pages/Rank';
-
+import Game from './components/Game';
 
 function App() {
 
@@ -77,6 +77,7 @@ function App() {
               <Route exact path="/userprofile" component={Profile_user_final} />
               {/* <Route exact path="/shop" component={Shop} /> */}
               {/* <Route exact path="/rank" component={Ranking} /> */}
+              <Route exact path="/play" component={Game} />
             </UserContext.Provider>
           </Switch>
       </Router>
